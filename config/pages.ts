@@ -18,7 +18,7 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      description: "Rafi Achmad Fachrudi's portfolio website.",
     },
   },
   skills: {
@@ -39,11 +39,11 @@ export const pagesConfig: PagesConfig = {
     },
   },
   contact: {
-    title: "Contact",
+    title: "Get In Touch",
     description: "Let's connect and explore collaborations.",
     metadata: {
       title: "Contact",
-      description: "Contact Naman Barkiya.",
+      description: "Contact Rafi Achmad Fachrudi",
     },
   },
   contributions: {

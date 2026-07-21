@@ -43,15 +43,15 @@ export function ModeToggle() {
           <Icons.retro className="mr-2 h-4 w-4" />
           <span>Retro</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("cyberpunk")}>
+        {/* <DropdownMenuItem onClick={() => setTheme("cyberpunk")}>
           <Icons.cyberpunk className="mr-2 h-4 w-4" />
           <span>Cyberpunk</span>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         <DropdownMenuItem onClick={() => setTheme("paper")}>
           <Icons.paper className="mr-2 h-4 w-4" />
           <span>Paper</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("aurora")}>
+        {/* <DropdownMenuItem onClick={() => setTheme("aurora")}>
           <Icons.aurora className="mr-2 h-4 w-4" />
           <span>Aurora</span>
         </DropdownMenuItem>
@@ -63,7 +63,7 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.laptop className="mr-2 h-4 w-4" />
           <span>System</span>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );
