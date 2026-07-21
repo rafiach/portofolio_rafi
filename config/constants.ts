@@ -60,7 +60,17 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "Kotlin"
+  | "Android SDK"
+  | "Jetpack Compose"
+  | "SQLite"
+  | "Room"
+  | "Retrofit"
+  | "Provider"
+  | "Gradle"
+  | "REST API"
+  | "Machine Learning";
 
 export type ValidCategory =
   | "Full Stack"
@@ -69,7 +79,8 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
+  | "AI Integration";
 
 export type ValidExpType = "Personal" | "Professional";
 

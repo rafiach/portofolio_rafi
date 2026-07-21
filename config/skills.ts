@@ -9,153 +9,111 @@ export interface skillsInterface {
 
 export const skillsUnsorted: skillsInterface[] = [
   {
-    name: "Next.js",
+    name: "Flutter",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Build cross-platform mobile apps for Android and iOS from a single Dart codebase.",
     rating: 5,
-    icon: Icons.nextjs,
+    icon: Icons.flutter,
   },
   {
-    name: "React",
+    name: "Kotlin",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+      "Develop native Android apps with modern, concise, and null-safe language features.",
     rating: 5,
-    icon: Icons.react,
+    icon: Icons.kotlin,
   },
   {
-    name: "GraphQL",
+    name: "Dart",
     description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
+      "Write clean, strongly-typed code that powers Flutter's UI and app logic.",
     rating: 4,
-    icon: Icons.graphql,
+    icon: Icons.dart,
   },
   {
-    name: "Nest.js",
+    name: "Android SDK",
     description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
+      "Build native Android apps using platform APIs, Activities, and Fragments.",
     rating: 4,
-    icon: Icons.nestjs,
+    icon: Icons.android,
   },
   {
-    name: "express.js",
+    name: "Jetpack Compose",
     description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
-  },
-  {
-    name: "Node.js",
-    description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
-    name: "Typescript",
-    description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
-    rating: 5,
-    icon: Icons.typescript,
-  },
-  {
-    name: "Javascript",
-    description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
-    rating: 5,
-    icon: Icons.javascript,
-  },
-  {
-    name: "HTML 5",
-    description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
-    icon: Icons.html5,
-  },
-  {
-    name: "CSS 3",
-    description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
-    icon: Icons.css3,
-  },
-  {
-    name: "React Native",
-    description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
-  },
-  {
-    name: "Angular",
-    description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
+      "Build modern, declarative Android UIs without XML layouts.",
     rating: 3,
-    icon: Icons.angular,
+    icon: Icons.jetpackCompose,
   },
   {
-    name: "Redux",
+    name: "Firebase",
     description:
-      "Manage app state effectively using a predictable and centralized state container.",
-    rating: 4,
-    icon: Icons.redux,
-  },
-  {
-    name: "Socket.io",
-    description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
-    rating: 3,
-    icon: Icons.socketio,
-  },
-  {
-    name: "Material UI",
-    description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    rating: 4,
-    icon: Icons.mui,
-  },
-
-  {
-    name: "Tailwind CSS",
-    description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
+      "Integrate real-time database, authentication, and cloud storage into mobile apps.",
     rating: 5,
-    icon: Icons.tailwindcss,
+    icon: Icons.firebase,
   },
   {
-    name: "AWS",
+    name: "SQLite",
     description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
+      "Store and query structured data locally for offline-first mobile apps.",
+    rating: 4,
+    icon: Icons.sqlite,
+  },
+  {
+    name: "Room",
+    description:
+      "Manage local Android databases with a clean, type-safe abstraction over SQLite.",
     rating: 3,
-    icon: Icons.amazonaws,
+    icon: Icons.room,
   },
   {
-    name: "Bootstrap",
+    name: "Retrofit",
     description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
+      "Consume REST APIs on Android with type-safe HTTP requests and easy parsing.",
+    rating: 4,
+    icon: Icons.retrofit,
+  },
+  {
+    name: "Provider",
+    description:
+      "Manage app-wide state in Flutter with a clean Model-Provider-View architecture.",
+    rating: 5,
+    icon: Icons.provider,
+  },
+  {
+    name: "REST API",
+    description:
+      "Design and consume RESTful endpoints to connect mobile apps with backend services.",
+    rating: 5,
+    icon: Icons.restApi,
+  },
+  {
+    name: "Django",
+    description:
+      "Build robust backend APIs and services with Python's batteries-included framework.",
+    rating: 3,
+    icon: Icons.django,
   },
   {
     name: "MySQL",
     description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
+      "Design relational schemas and write queries for structured, scalable data storage.",
+    rating: 4,
     icon: Icons.mysql,
   },
   {
-    name: "Netlify",
+    name: "Git",
     description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
+      "Track changes and collaborate on code using branches, commits, and pull requests.",
+    rating: 5,
+    icon: Icons.git,
   },
+  {
+    name: "Machine Learning",
+    description:
+      "Apply object detection and predictive models to solve real-world mobile use cases.",
+    rating: 3,
+    icon: Icons.machineLearning,
+  },
+  
 ];
 
 export const skills = skillsUnsorted
