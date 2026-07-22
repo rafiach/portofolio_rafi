@@ -16,26 +16,64 @@ export interface ExperienceInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
-    id: "ubs",
-    position: "Software Development Engineer",
-    company: "UBS",
-    location: "Mumbai, India",
-    startDate: new Date("2024-08-01"),
-    endDate: "Present",
+    id: "ruang-robot",
+    position: "Freelance Mobile App Developer",
+    company: "Ruang Robot",
+    location: "Kediri, Indonesia",
+    startDate: new Date("2025-01-10"),
+    endDate: new Date("2026-05-17"),
     description: [
-      "Shipped production features within the first month for a trader-facing P&L dashboard used by global stakeholders.",
-      "Led the migration from Kendo UI to UBS’s internal design system to reduce UI inconsistencies and improve render performance.",
-      "Designed and automated a daily FX rate ingestion pipeline using Databricks (Python, Spark SQL) and Java services.",
+      "Mengembangkan aplikasi Android untuk solusi Internet of Things (IoT) dan robotika menggunakan Kotlin dan Jetpack Compose.",
+      "Berkolaborasi dengan klien untuk menerjemahkan kebutuhan bisnis menjadi aplikasi mobile yang fungsional.",
+      "Mengintegrasikan aplikasi dengan Firebase dan REST API untuk mendukung pemantauan serta pengendalian perangkat secara real-time.",
+      "Melakukan pemeliharaan, pengembangan fitur baru, serta perbaikan bug guna meningkatkan kualitas dan performa aplikasi."
     ],
     achievements: [
-      "Shipped production features within the first month for a trader-facing P&L dashboard used by global stakeholders.",
-      "Led migration from Kendo UI to UBS’s internal design system, reducing UI inconsistencies and improving render performance across core dashboards.",
-      "Designed and automated a daily FX rate ingestion pipeline using Databricks (Python, Spark SQL) and Java services, eliminating manual rate updates.",
-      "Won UBS AI Venture Challenge by building data transformation and anomaly detection pipelines on trading datasets.",
-      "Led a 12-member team in an internal hackathon to build an AI-powered tool that generates GitLab tickets, test cases, and requirement summaries.",
+      "Mengembangkan aplikasi monitoring perangkat IoT dan sistem kontrol robot.",
+      "Mengimplementasikan Firebase Realtime Database untuk sinkronisasi data secara real-time.",
+      "Menyelesaikan beberapa proyek aplikasi mobile sesuai kebutuhan klien.",
+      "Melakukan presentasi dan pendampingan penggunaan aplikasi kepada klien setelah implementasi."
     ],
-    skills: ["Typescript", "React", "Databricks", "Java", "Python"],
-    companyUrl: "https://www.ubs.com",
-    logo: "/experience/keys-logo.png",
+    skills: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Firebase",
+      "REST API",
+      "Flutter",
+      "Machine Learning"
+    ],
+    companyUrl: "https://ruangrobot.com/",
+    logo: "/experience/rr_logo.jpg",
+  },
+  {
+    id: "xenopati",
+    position: "Mobile Developer Intern",
+    company: "PT Xeno Persada Teknologi (Xenopati)",
+    location: "Surabaya, Indonesia",
+    startDate: new Date("2025-11-24"),
+    endDate: new Date("2026-05-23"),
+    description: [
+      "Mengembangkan dan memelihara aplikasi mobile berbasis Flutter yang digunakan dalam lingkungan produksi.",
+      "Mengimplementasikan antarmuka pengguna berdasarkan desain UI/UX serta memastikan pengalaman pengguna yang konsisten di berbagai perangkat.",
+      "Mengintegrasikan REST API dan mengelola alur data aplikasi untuk mendukung kebutuhan bisnis dan operasional klien.",
+      "Berkolaborasi dengan tim backend, UI/UX designer, dan project manager dalam proses pengembangan, pengujian, serta deployment aplikasi."
+    ],
+    achievements: [
+      "Mengembangkan berbagai fitur pada aplikasi manajemen gym, termasuk membership, booking class, check-in/check-out, dan riwayat kehadiran.",
+      "Mengimplementasikan fitur notifikasi, integrasi peta, navigasi eksternal, dan berbagai proses CRUD.",
+      "Melakukan refactoring kode dan perbaikan bug untuk meningkatkan stabilitas serta maintainability aplikasi.",
+      "Berpartisipasi dalam proses pengujian aplikasi untuk kebutuhan distribusi di Google Play Store dan Apple App Store.",
+      "Mengintegrasikan thermal printer dan menyesuaikan implementasi native Android ke dalam proyek Flutter.",
+      "Mempresentasikan progres pengembangan kepada klien dan berkontribusi dalam diskusi kebutuhan fitur."
+    ],
+    skills: [
+      "Flutter",
+      "Dart",
+      "REST API",
+      "Git",
+      "Firebase",
+    ],
+    companyUrl: "https://xenopati.id/",
+    logo: "/experience/xeno_logo.jpg",
   },
 ];
