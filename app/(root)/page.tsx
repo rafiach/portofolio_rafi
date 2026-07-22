@@ -222,7 +222,7 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-      <AnimatedSection
+      {/* <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
         id="contributions"
@@ -250,8 +250,8 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
-      <AnimatedSection
+      </AnimatedSection> */}
+      {/* <AnimatedSection
         direction="up"
         className="container space-y-6 py-10 my-14"
         id="blogs"
@@ -290,7 +290,7 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
