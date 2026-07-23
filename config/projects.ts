@@ -34,31 +34,33 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Full Stack", "Mobile Dev", "AI Integration"],
     shortDescription:
-      "Kasir koperasi jadi otomatis — cukup arahkan kamera, produk langsung terdeteksi.",
+      "DigiCoop is an AI-powered mobile cashier application developed as my undergraduate thesis project to modernize transaction workflows in a university cooperative.",
     websiteLink: "",
     githubLink: "https://github.com/rafiach/Digicoop",
     techStack: ["Kotlin", "Machine Learning", "Django", "MySQL"],
     startDate: new Date("2025-01-20"),
     endDate: new Date("2025-07-17"),
-    companyLogoImg: "/projects/digicoop/logo.png",
+    companyLogoImg: "/projects/digicoop/image_1.png",
     pagesInfoArr: [
       {
-        title: "Tampilan Aplikasi",
+        title: "Aplication Overview",
         description:
-          "Kamera mendeteksi produk secara real-time dan otomatis mencatatnya ke sistem transaksi kasir.",
-        imgArr: ["/projects/digicoop/screenshot-1.png"],
+          "Smart mobile cashier using computer vision and speech recognition.",
+        imgArr: ["/projects/digicoop/image_2.png", "/projects/digicoop/image_3.png", "/projects/digicoop/image_4.png",],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Koperasi kampus mengalami kesulitan dalam proses transaksi dan pendataan pembeli — kasir manual yang mencari produk satu per satu memakan waktu dan rawan human error, terutama saat jam ramai.",
-        "Sebagai proyek skripsi, saya membangun aplikasi Android yang mendeteksi produk secara otomatis lewat kamera real-time menggunakan model AI (YOLO). Produk yang terdeteksi langsung dicocokkan ke database dan tercatat ke sistem transaksi, dengan data tersimpan lokal maupun tersinkronisasi ke server (Django REST API) sehingga tetap berjalan meski koneksi terputus.",
+        "DigiCoop is an AI-powered mobile cashier application developed as my undergraduate thesis project to modernize transaction workflows in a university cooperative. The application provides a faster and more convenient checkout experience by allowing cashiers to complete transactions using either image recognition or voice recognition.",
+        "I designed and developed the Android application using Kotlin and Jetpack Compose, while integrating AI models for product identification and speech recognition. The application communicates with a backend service to process detections, retrieve product information, calculate transaction totals, and synchronize completed purchases with the cooperative's cashier database.",
+        "By combining computer vision, voice-based interaction, and seamless backend integration, DigiCoop simplifies the checkout process and reduces manual product input while ensuring every completed transaction is automatically recorded in the cooperative's existing system."
       ],
       bullets: [
-        "Membangun sistem deteksi produk real-time berbasis YOLO yang terbukti akurat saat pengujian skripsi.",
-        "Mengintegrasikan sistem kasir dengan backend Django REST API dan database MySQL.",
-        "Merancang penyimpanan data lokal + sinkronisasi server agar aplikasi tetap bisa dipakai saat koneksi internet terputus.",
-        "Diuji langsung oleh pihak koperasi yang mengonfirmasi sistem berjalan sesuai fungsinya.",
+        "Integrated two AI interaction methods: Image Recognition & Voice Recognition.",
+        "Developed a complete mobile cashier workflow from product detection to payment.",
+        "Connected transaction results directly to the cooperative cashier database.",
+        "Built using Kotlin, Jetpack Compose, Django REST API, and YOLOv8.",
+        "Undergraduate thesis project focused on AI-assisted retail transactions."
       ],
     },
   },
@@ -68,30 +70,33 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Mobile Dev", "Full Stack"],
     shortDescription:
-      "Catat pemasukan-pengeluaran, lihat insight lewat grafik, data aman tersimpan offline maupun cloud.",
+      "Danamoo is a personal budget tracking application that helps users manage their daily income and expenses through a simple, intuitive, and privacy-friendly experience.",
     websiteLink: "",
     githubLink: "",
     techStack: ["Flutter", "Firebase"],
     startDate: new Date("2026-06-10"), 
     endDate: new Date(), 
-    companyLogoImg: "/projects/danamoo/logo.png",
+    companyLogoImg: "/projects/danamoo/image_1.png",
     pagesInfoArr: [
       {
-        title: "Dashboard & Insight",
+        title: "Aplication Overview",
         description:
-          "Ringkasan pemasukan-pengeluaran dengan visualisasi grafik dan sistem backup/restore data.",
-        imgArr: ["/projects/danamoo/screenshot-1.png"],
+          "View your financial summary with interactive charts and recent transaction insights.",
+        imgArr: ["/projects/danamoo/image_2.png", "/projects/danamoo/image_3.png", "/projects/danamoo/image_4.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Banyak orang butuh cara sederhana mencatat pemasukan dan pengeluaran harian tanpa harus terhubung langsung ke rekening bank atau e-wallet, yang seringkali terasa rumit atau menimbulkan kekhawatiran soal keamanan data.",
-        "Danamoo saya kembangkan end-to-end — dari frontend, arsitektur, sampai backend — sebagai budget tracker Flutter dengan ringkasan visual berupa grafik pengeluaran, sistem backup/restore, serta penyimpanan ganda: lokal (offline) dan Firestore (cloud), sehingga data tetap aman dan bisa diakses tanpa koneksi internet.",
+        "Danamoo is a personal budget tracking application that helps users manage their daily income and expenses through a simple, intuitive, and privacy-friendly experience. The application is designed to work seamlessly both offline and online, ensuring financial records remain accessible anytime while providing optional cloud backup.",
+        "As a full-cycle personal project, I independently designed the application architecture, developed the mobile interface, implemented local and cloud data storage, and built features for financial insights and data management. This project allows me to explore the complete application lifecycle beyond frontend development, from data modeling to backend integration.",
+        "Danamoo continues to evolve as I experiment with new features and improve the overall user experience, making it both a practical personal finance tool and a platform for continuous learning.",
       ],
       bullets: [
-        "Mengembangkan aplikasi secara full-cycle, dari UI, arsitektur state management, sampai integrasi backend.",
-        "Membangun visualisasi grafik (chart insight) untuk membantu pengguna memahami pola keuangannya.",
-        "Merancang sistem backup & restore data dengan penyimpanan ganda lokal + Firestore (cloud).",
+        "Built as a full-cycle Flutter application from UI design to cloud integration.",
+        "Supports offline-first data storage with optional cloud backup using Firebase.",
+        "Provides visual financial insights through interactive charts.",
+        "Implements backup and restore functionality for secure data management.",
+        "Continuously improved as an active long-term personal project."
       ],
     },
   },
@@ -99,33 +104,63 @@ export const Projects: ProjectInterface[] = [
     id: "sisapi",
     companyName: "SiSapi",
     type: "Personal",
-    category: ["Mobile Dev", "AI Integration"],
+    category: ["Mobile Dev", "IoT", "Machine Learning"],
     shortDescription:
-      "Kelola data sapi dan cek kandungan nutrisi pakan, langsung dari HP — lewat sensor yang terhubung real-time.",
+      "An Android application for cattle management that integrates IoT sensors and on-device machine learning to analyze livestock feed nutrition in real time.",
     websiteLink: "",
     githubLink: "",
-    techStack: ["Kotlin", "Firebase", "Machine Learning"],
+    techStack: [
+      "Kotlin",
+      "Firebase",
+      "Machine Learning",
+      "IoT"
+    ],
     startDate: new Date("2025-07-15"), 
     endDate: new Date("2025-09-21"), 
-    companyLogoImg: "/projects/sisapi/logo.png",
+    companyLogoImg: "/projects/sisapi/image_1.png",
+
     pagesInfoArr: [
       {
-        title: "Dashboard Manajemen Ternak",
+        title: "Dashboard Overview",
         description:
-          "Data sapi dan hasil analisis nutrisi pakan dari sensor NIR ditampilkan real-time.",
-        imgArr: ["/projects/sisapi/screenshot-1.png"],
+          "Monitor cattle information and access essential livestock management features from a centralized dashboard.",
+        imgArr: [
+          "/projects/sisapi/image_dashboard.png"
+        ],
+      },
+      {
+        title: "Cattle Management",
+        description:
+          "Manage cattle profiles, operational records, health history, and estimated selling prices in one place.",
+        imgArr: [
+          "/projects/sisapi/image_cattle.png",
+          "/projects/sisapi/image_operational.png",
+          "/projects/sisapi/image_sell.png"
+        ],
+      },
+      {
+        title: "Feed Nutrition Detection",
+        description:
+          "Analyze livestock feed nutrition in real time using data collected from an integrated NIR sensor.",
+        imgArr: [
+          "/projects/sisapi/image_detection.png"
+        ],
       },
     ],
+
     descriptionDetails: {
       paragraphs: [
-        "Komunitas peternak sapi kesulitan mengelola data ternak (jenis, berat, riwayat penyakit) secara terorganisir, serta tidak punya cara mudah untuk mengetahui kandungan nutrisi pakan yang diberikan — padahal ini penting untuk kesehatan ternak dan efisiensi biaya pakan.",
-        "Sebagai bagian dari program pengabdian masyarakat, saya membangun sisi Android dari sistem ini: aplikasi manajemen data sapi yang terhubung ke sensor NIR (Near Infrared) via Firebase Realtime Database, lalu menjalankan model prediksi nutrisi langsung on-device sehingga peternak bisa langsung melihat hasil analisis tanpa menunggu proses di server terpisah. Aplikasi juga memberi rekomendasi harga jual sapi berdasarkan berat, biaya operasional, dan harga pasar.",
+        "SiSapi is an Android application developed for a community service program to help cattle farmers manage livestock information and monitor feed quality through digital technology. The application simplifies daily record-keeping while providing valuable insights into cattle health and operational data.",
+        "As the Android Developer, I designed and implemented the mobile application, integrating it with Firebase Realtime Database to receive data from an external Near Infrared (NIR) sensor. The application processes the incoming sensor data and displays feed nutrition analysis directly on the device, providing farmers with instant results without requiring a separate backend service.",
+        "Beyond livestock management, the application also includes operational expense tracking, cattle health records, and selling price estimation, making it a comprehensive digital assistant for livestock management."
       ],
+
       bullets: [
-        "Membangun aplikasi Android yang terhubung real-time ke sensor NIR melalui Firebase Realtime Database.",
-        "Menjalankan model prediksi nutrisi pakan on-device di Android, tanpa bergantung pada server terpisah.",
-        "Menambahkan fitur rekomendasi harga jual sapi berdasarkan data berat dan harga pasar.",
-        "Diuji langsung di lapangan oleh komunitas peternak, dengan sebagian merasa terbantu untuk mencatat data ternak dan mengecek nutrisi pakan lebih praktis.",
+        "Developed a native Android application using Kotlin for livestock management.",
+        "Integrated Firebase Realtime Database for real-time communication with IoT devices.",
+        "Implemented on-device machine learning inference for feed nutrition analysis.",
+        "Built features for cattle records, operational expenses, disease history, and selling price estimation.",
+        "Contributed to a community service project promoting digital transformation in livestock farming."
       ],
     },
   },

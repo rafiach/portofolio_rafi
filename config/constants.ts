@@ -70,7 +70,8 @@ export type ValidSkills =
   | "Provider"
   | "Gradle"
   | "REST API"
-  | "Machine Learning";
+  | "Machine Learning"
+  | "IoT";
 
 export type ValidCategory =
   | "Full Stack"
@@ -80,7 +81,9 @@ export type ValidCategory =
   | "Web Dev"
   | "Mobile Dev"
   | "3D Modeling"
-  | "AI Integration";
+  | "AI Integration"
+  | "Machine Learning"
+  | "IoT";
 
 export type ValidExpType = "Personal" | "Professional";
 
