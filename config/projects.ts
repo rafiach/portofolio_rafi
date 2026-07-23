@@ -125,7 +125,7 @@ export const Projects: ProjectInterface[] = [
         description:
           "Monitor cattle information and access essential livestock management features from a centralized dashboard.",
         imgArr: [
-          "/projects/sisapi/image_dashboard.png"
+          "/projects/sisapi/image_2.png",
         ],
       },
       {
@@ -133,9 +133,8 @@ export const Projects: ProjectInterface[] = [
         description:
           "Manage cattle profiles, operational records, health history, and estimated selling prices in one place.",
         imgArr: [
-          "/projects/sisapi/image_cattle.png",
-          "/projects/sisapi/image_operational.png",
-          "/projects/sisapi/image_sell.png"
+          "/projects/sisapi/image_3.png",
+          "/projects/sisapi/image_4.png",
         ],
       },
       {
@@ -143,7 +142,7 @@ export const Projects: ProjectInterface[] = [
         description:
           "Analyze livestock feed nutrition in real time using data collected from an integrated NIR sensor.",
         imgArr: [
-          "/projects/sisapi/image_detection.png"
+          "/projects/sisapi/image_5.png"
         ],
       },
     ],
@@ -168,32 +167,45 @@ export const Projects: ProjectInterface[] = [
     id: "danukerti",
     companyName: "Danukerti",
     type: "Professional",
-    category: ["Mobile Dev"],
+    category: ["Mobile Dev", "IoT"],
     shortDescription:
-      "Pantau dan kendalikan akuarium pintar dari HP — real-time, otomatis maupun manual.",
+      "A smart aquarium monitoring and control application that enables real-time device management through IoT integration.",
     websiteLink: "",
     githubLink: "",
-    techStack: ["Kotlin", "Firebase"],
+    techStack: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Firebase",
+      "IoT"
+    ],
     startDate: new Date("2025-01-17"), 
     endDate: new Date("2025-03-01"),
-    companyLogoImg: "/projects/danukerti/logo.png",
+    companyLogoImg: "/projects/danukerti/image_1.png",
+
     pagesInfoArr: [
       {
-        title: "Monitoring & Kontrol Akuarium",
+        title: "Smart Aquarium Dashboard",
         description:
-          "Dashboard real-time untuk Auto Mode dan Manual Mode kontrol akuarium pintar.",
-        imgArr: ["/projects/danukerti/screenshot-1.png"],
+          "Monitor water conditions and remotely control aquarium devices through automatic or manual operation modes.",
+        imgArr: [
+          "/projects/danukerti/image_dashboard.png"
+        ],
       },
     ],
+
     descriptionDetails: {
       paragraphs: [
-        "Mengelola akuarium pintar berbasis IoT dengan banyak sensor (kejernihan air, pemberi pakan, buka-tutup pipa ganti air, deteksi ikan mati) butuh aplikasi yang bisa menampilkan kondisi sensor secara real-time sekaligus memungkinkan kontrol langsung, tanpa risiko perintah dobel yang bisa merusak alat.",
-        "Aplikasi Android yang saya kembangkan terhubung ke sistem IoT via Firebase Realtime Database, mendukung Auto Mode (berjalan otomatis sesuai jadwal/kondisi sensor) dan Manual Mode (kontrol langsung oleh pengguna). Setiap aksi kontrol memakai pendekatan one-shot trigger, sehingga satu perintah hanya diproses satu kali — mencegah spam perintah ke perangkat maupun notifikasi berulang ke pengguna.",
+        "Danukerti is an Android application developed to support a smart aquarium IoT system by providing real-time monitoring and remote device control. The application allows users to monitor sensor data, automate routine operations, and manually control connected hardware from a single dashboard.",
+        "As the Android Developer, I built the mobile application and integrated it with Firebase Realtime Database to synchronize sensor readings and control commands. The application supports both automatic scheduling and manual operation while ensuring the interface remains synchronized with live device status.",
+        "To improve system reliability, the application implements a one-shot trigger mechanism that prevents duplicate commands and repeated notifications, reducing the risk of unintended device behavior during remote operation."
       ],
+
       bullets: [
-        "Membangun dua mode kontrol (Auto & Manual) yang tetap sinkron secara real-time lewat Firebase Realtime Database.",
-        "Merancang pola one-shot trigger untuk mencegah perintah/notifikasi ganda ke perangkat IoT.",
-        "Menggunakan arsitektur ViewModel + reactive state agar tampilan selalu sesuai kondisi data terbaru.",
+        "Developed a native Android application for real-time IoT monitoring and remote control.",
+        "Integrated Firebase Realtime Database for live sensor updates and device communication.",
+        "Implemented automatic and manual control modes for aquarium management.",
+        "Designed a one-shot trigger mechanism to prevent duplicate commands and notification spam.",
+        "Built using a reactive architecture with ViewModel and StateFlow for synchronized real-time data."
       ],
     },
   },
