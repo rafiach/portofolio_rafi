@@ -27,7 +27,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Skills",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Rafi Achmad Fachrudi's key skills that define his professional identity.",
     },
   },
   projects: {
@@ -35,7 +35,7 @@ export const pagesConfig: PagesConfig = {
     description: "Showcasing impactful projects and technical achievements.",
     metadata: {
       title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
+      description: "Rafi Achmad Fachrudi's projects in building web applications.",
     },
   },
   contact: {
@@ -52,15 +52,15 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Contributions",
       description:
-        "Naman Barkiya's open-source contributions and community involvement.",
+        "Rafi Achmad Fachrudi's open-source contributions and community involvement.",
     },
   },
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Rafi Achmad Fachrudi's resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Rafi Achmad Fachrudi's resume.",
     },
   },
   blogs: {
@@ -70,7 +70,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Blogs",
       description:
-        "Naman Barkiya's blog — thoughts on AI, software engineering, and building in public.",
+        "Rafi Achmad Fachrudi's blog — thoughts on AI, software engineering, and building in public.",
     },
   },
   experience: {
@@ -79,7 +79,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Experience",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Rafi Achmad Fachrudi's professional journey and experience timeline.",
     },
   },
 };

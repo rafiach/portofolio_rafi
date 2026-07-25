@@ -174,13 +174,12 @@ export const Projects: ProjectInterface[] = [
     githubLink: "",
     techStack: [
       "Kotlin",
-      "Jetpack Compose",
       "Firebase",
-      "IoT"
+      "IoT",
     ],
     startDate: new Date("2025-01-17"), 
     endDate: new Date("2025-03-01"),
-    companyLogoImg: "/projects/danukerti/image_1.png",
+    companyLogoImg: "/projects/danukerti/image_2.png",
 
     pagesInfoArr: [
       {
@@ -188,7 +187,7 @@ export const Projects: ProjectInterface[] = [
         description:
           "Monitor water conditions and remotely control aquarium devices through automatic or manual operation modes.",
         imgArr: [
-          "/projects/danukerti/image_dashboard.png"
+          "/projects/danukerti/image_1.png"
         ],
       },
     ],
@@ -213,68 +212,134 @@ export const Projects: ProjectInterface[] = [
     id: "tessa",
     companyName: "Tessa",
     type: "Professional",
-    category: ["Mobile Dev", "AI Integration"],
+    category: ["Mobile Dev", "IoT"],
     shortDescription:
-      "Tong sampah pintar yang mendeteksi jenis sampah dan mengubahnya jadi poin — konsep awal menuju bank sampah digital.",
+      "A smart waste management application that monitors IoT-enabled waste bins, detects waste types, and introduces a reward point concept to encourage responsible waste disposal.",
     websiteLink: "",
     githubLink: "",
-    techStack: ["Kotlin", "Firebase", "Machine Learning"],
+    techStack: [
+      "Kotlin",
+      "Firebase",
+      "IoT",
+      "Jetpack Compose",
+      "Machine Learning"
+    ],
     startDate: new Date("202-04-12"), 
     endDate: new Date("2025-05-27"), 
-    companyLogoImg: "/projects/tessa/logo.png",
+    companyLogoImg: "/projects/tessa/image_1.png",
+
     pagesInfoArr: [
-      {
-        title: "Dashboard Kapasitas & Deteksi Sampah",
-        description:
-          "Monitoring kapasitas tong sampah dan jenis sampah secara real-time.",
-        imgArr: ["/projects/tessa/screenshot-1.png"],
-      },
-    ],
+    {
+      title: "Dashboard Overview",
+      description:
+        "Monitor waste bin capacity, reward points, and real-time device status from a centralized dashboard.",
+      imgArr: [
+        "/projects/tessa/image_1.png"
+      ],
+    },
+    {
+      title: "Waste Detection",
+      description:
+        "Scan and identify waste through the smart waste bin, then automatically record the detected waste type.",
+      imgArr: [
+        "/projects/tessa/image_2.png"
+      ],
+    },
+        {
+      title: "Disposal History",
+      description:
+        "Review previous waste disposal activities, collected points, and transaction history in one place.",
+      imgArr: [
+        "/projects/tessa/image_3.png"
+      ],
+    },
+    {
+      title: "Reward Points",
+      description:
+        "Earn reward points from every successful waste disposal and redeem them to encourage sustainable habits.",
+      imgArr: [
+        "/projects/tessa/image_4.png"
+      ],
+    },
+  ],
+
     descriptionDetails: {
       paragraphs: [
-        "Pengelolaan sampah konvensional sulit dipantau kapasitasnya secara real-time, dan kurang ada insentif langsung bagi masyarakat untuk aktif memilah/membuang sampah dengan benar.",
-        "Aplikasi Android yang saya kembangkan terhubung ke perangkat IoT tong sampah pintar, menampilkan deteksi jenis sampah dan monitoring kapasitas secara real-time lewat Firebase, lengkap dengan smart alert anti-spam dan riwayat pengisian. Sebagai pengembangan lanjutan, hasil deteksi sampah dirancang bisa dikonversi menjadi poin — konsep awal menuju sistem bank sampah digital.",
+        "Tessa is an Android application developed to support a smart waste bin system by providing real-time monitoring and waste detection through IoT integration. The application enables users to monitor waste bin conditions while promoting more responsible waste disposal practices.",
+        "As the Android Developer, I built the mobile application and integrated it with Firebase Realtime Database to synchronize waste detection results, bin capacity, and device status in real time. The application also implements smart notifications to prevent repeated alerts for the same condition, creating a cleaner and more reliable user experience.",
+        "Beyond monitoring, the project introduces a reward point concept where detected waste can be converted into points, providing a foundation for a future digital waste bank ecosystem that encourages community participation in waste management."
       ],
+
       bullets: [
-        "Mengembangkan dashboard monitoring kapasitas tong sampah secara real-time via Firebase.",
-        "Menambahkan smart alert anti-spam agar notifikasi tidak berulang untuk kondisi yang sama.",
-        "Merancang konsep konversi deteksi sampah menjadi poin sebagai fondasi menuju bank sampah digital.",
+        "Developed a native Android application for real-time smart waste monitoring.",
+        "Integrated Firebase Realtime Database for live synchronization with IoT devices.",
+        "Implemented smart alert logic to prevent duplicate notifications.",
+        "Built dashboards for waste detection, bin capacity, and disposal history.",
+        "Designed a reward point concept to support future digital waste bank integration."
       ],
     },
   },
-  {
+    {
     id: "eyeguard",
     companyName: "EyeGuard",
     type: "Professional",
     category: ["Mobile Dev"],
     shortDescription:
-      "Jaga kesehatan mata sehari-hari — dari tips, tes ketajaman, sampai cari klinik terdekat, semua dalam satu aplikasi.",
+      "A mobile application that helps users maintain eye health through educational content, vision screening, screen time monitoring, and nearby eye clinic recommendations.",
     websiteLink: "",
     githubLink: "",
-    techStack: ["Flutter"],
+    techStack: [
+      "Flutter",
+      "Geolocator",
+    ],
     startDate: new Date("2026-02-10"), 
     endDate: new Date("2026-03-09"), 
-    companyLogoImg: "/projects/eyeguard/logo.png",
+    companyLogoImg: "/projects/eyeguard/image_1.png",
+
     pagesInfoArr: [
       {
-        title: "Edukasi & Monitoring Kesehatan Mata",
+        title: "Eye Health Dashboard",
         description:
-          "Tips kesehatan mata, tes ketajaman, monitoring screen time, dan pencarian klinik terdekat.",
-        imgArr: ["/projects/eyeguard/screenshot-1.png"],
+          "Access eye care tips, educational content, and daily health insights from a centralized dashboard.",
+        imgArr: [
+          "/projects/eyeguard/image_1.png"
+        ],
+      },
+      {
+        title: "Vision Test & Screen Time",
+        description:
+          "Perform a simple vision screening and monitor application usage with customizable screen time reminders.",
+        imgArr: [
+          "/projects/eyeguard/image_2.png",
+        ],
+      },
+      {
+        title: "Nearby Eye Clinics",
+        description:
+          "Locate nearby eye clinics based on your current location with estimated travel distances.",
+        imgArr: [
+          "/projects/eyeguard/image_3.png"
+        ],
       },
     ],
+
     descriptionDetails: {
       paragraphs: [
-        "Banyak orang kurang sadar soal dampak penggunaan HP berlebihan terhadap kesehatan mata, dan tidak punya cara mudah untuk memantau screen time, mengecek ketajaman mata mandiri, maupun menemukan layanan kesehatan mata terdekat.",
-        "EyeGuard menggabungkan edukasi dan monitoring kesehatan mata dalam satu aplikasi Flutter: konten tips kesehatan mata, tes ketajaman mata sederhana, pemantauan penggunaan aplikasi HP dengan notifikasi batas waktu yang bisa diatur, serta pencarian klinik mata terdekat berdasarkan lokasi pengguna.",
+        "EyeGuard is a Flutter-based mobile application designed to encourage healthier digital habits and improve awareness of eye health. It combines educational resources, self-assessment tools, and location-based services into a single, user-friendly platform.",
+        "As the Flutter Developer, I developed the mobile application and implemented features including eye health education, a simple vision screening tool, screen time monitoring with configurable reminders, and nearby eye clinic recommendations based on the user's location.",
+        "By integrating preventive education with practical daily tools, EyeGuard helps users better understand their eye health while encouraging healthier smartphone usage habits."
       ],
+
       bullets: [
-        "Membangun fitur tes ketajaman mata sederhana langsung di dalam aplikasi.",
-        "Mengembangkan sistem monitoring screen time dengan notifikasi batas waktu yang bisa dikustomisasi pengguna.",
-        "Menambahkan fitur pencarian klinik mata terdekat berdasarkan kalkulasi jarak lokasi pengguna.",
+        "Developed a cross-platform mobile application using Flutter.",
+        "Implemented screen time monitoring with customizable usage reminders.",
+        "Built a simple vision screening feature for basic eye health self-assessment.",
+        "Integrated location-based clinic recommendations with distance calculation.",
+        "Combined educational content and practical tools to promote healthier digital habits."
       ],
     },
   },
+  
 ];
 
 export const featuredProjects = Projects.slice(0, 3);

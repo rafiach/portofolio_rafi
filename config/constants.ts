@@ -71,7 +71,8 @@ export type ValidSkills =
   | "Gradle"
   | "REST API"
   | "Machine Learning"
-  | "IoT";
+  | "IoT"
+  | "Geolocator";
 
 export type ValidCategory =
   | "Full Stack"
