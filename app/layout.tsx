@@ -12,6 +12,8 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
 
+
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
