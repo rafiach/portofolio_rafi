@@ -39,10 +39,10 @@ export function ModeToggle() {
           <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => setTheme("retro")}>
+        {/* <DropdownMenuItem onClick={() => setTheme("retro")}>
           <Icons.retro className="mr-2 h-4 w-4" />
           <span>Retro</span>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         {/* <DropdownMenuItem onClick={() => setTheme("cyberpunk")}>
           <Icons.cyberpunk className="mr-2 h-4 w-4" />
           <span>Cyberpunk</span>

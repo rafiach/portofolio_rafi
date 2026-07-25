@@ -22,6 +22,7 @@ import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import ChipContainer from "@/components/ui/chip-container";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -77,13 +78,13 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
+      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 min-h-screen flex items-center">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
           <Image
             src={profileImg}
             height={100}
             width={100}
-            sizes="100vw"
+            sizes="80vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
             alt="Rafi Achmad Fachrudi - Mobile App Developer Portfolio"
             priority
@@ -91,7 +92,7 @@ export default function IndexPage() {
           <AnimatedText
             as="h1"
             delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl"
           >
             Rafi Achmad Fachrudi
           </AnimatedText>
@@ -100,16 +101,18 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Mobile App Developer | Flutter Enthusiast
+            Mobile App Developer
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Mobile developer focused on building clean, functional, and
-              user-friendly apps with Flutter and Kotlin (Android Native).
+              I build mobile applications that combine intuitive user experiences with modern technologies to solve real-world problems. From AI-powered solutions to IoT-connected systems, I enjoy turning ideas into reliable and impactful products.
             </p>
           </div>
+          <ChipContainer
+            textArr={["Flutter", "Kotlin", "Firebase", "REST API"]}
+          />
 
-          <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
+          <div className="flex flex-col mt-4 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
                 href={"/resume"}

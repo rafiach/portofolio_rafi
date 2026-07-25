@@ -72,7 +72,8 @@ export type ValidSkills =
   | "REST API"
   | "Machine Learning"
   | "IoT"
-  | "Geolocator";
+  | "Geolocator"
+  | "WordPress";
 
 export type ValidCategory =
   | "Full Stack"

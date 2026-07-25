@@ -47,23 +47,30 @@ export function ContactForm() {
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `Pesan baru dari ${values.name} (portfolio contact form)`,
+          ...values,
+        }),
       });
 
-      form.reset();
+      const data = await response.json();
 
-      if (response.status === 200) {
+      if (data.success) {
+        form.reset();
         storeModal.onOpen({
           title: "Thankyou!",
           description:
             "Your message has been received! I appreciate your contact and will get back to you shortly.",
           icon: Icons.successAnimated,
         });
+      } else {
+        console.log("Web3Forms error:", data);
       }
     } catch (err) {
       console.log("Err!", err);
