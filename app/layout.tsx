@@ -128,12 +128,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Toaster />
           <ModalProvider />
         </ThemeProvider>
-        <Script
+        {/* <Script
           src="https://convot.xyz/widget.js"
           data-token="3vpr28Va7E8luRq8DMOStAr9tefOCVqifQ28fpp6grrKS4zflNRZQjQpmeu4os_2nuLmmh1DOshndiN5O1vvGg"
           data-api-url="https://api.convot.xyz"
           strategy="afterInteractive"
-        />
+        /> */}
       </body>
       {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>

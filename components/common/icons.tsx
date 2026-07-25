@@ -74,6 +74,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiX,
+  SiInstagram,
+  SiWhatsapp,
 } from "react-icons/si";
 
 import {
@@ -148,6 +150,8 @@ export const Icons = {
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
+  whatsapp: SiWhatsapp,
+  instagram: SiInstagram,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

@@ -22,8 +22,20 @@ export const SocialLinks: SocialInterface[] = [
   },
   {
     name: "Gmail",
-    username: "Rafi_ach",
+    username: "achmadfahrudi153@gmail.com",
     icon: Icons.gmail,
     link: "mailto:achmadfahrudi153@gmail.com",
+  },
+  {
+    name: "Instagram",
+    username: "mas.mobi",
+    icon: Icons.instagram,
+    link: "https://www.instagram.com/mas.mobi/",
+  },
+  {
+    name: "Whatsapp",
+    username: "Rafi Achmad Fachrudi",
+    icon: Icons.whatsapp,
+    link: "https://wa.me/6289616728581",
   },
 ];
