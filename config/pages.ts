@@ -1,3 +1,4 @@
+
 import { ValidPages } from "./constants";
 
 type PagesConfig = {
@@ -82,4 +83,14 @@ export const pagesConfig: PagesConfig = {
         "Rafi Achmad Fachrudi's professional journey and experience timeline.",
     },
   },
+  about: {
+    title: "About",
+    description: "Learn more about me.",
+    metadata: {
+        title: "About",
+      description: "Learn more about Rafi Achmad Fachrudi.",
+    },
+  
+    }
+    
 };

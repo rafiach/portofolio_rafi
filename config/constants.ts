@@ -97,4 +97,5 @@ export type ValidPages =
   | "contact"
   | "contributions"
   | "resume"
-  | "blogs";
+  | "blogs"
+  | "about";
