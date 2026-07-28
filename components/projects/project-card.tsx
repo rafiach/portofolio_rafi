@@ -5,6 +5,7 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 interface ProjectCardProps {
   project: ProjectInterface;
@@ -26,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.companyName}
         </h5>
         <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
-          {project.shortDescription}
+          <BilingualText text={project.shortDescription} />
         </p>
         <div className="flex gap-2 flex-wrap">
           <ChipContainer textArr={project.category} />

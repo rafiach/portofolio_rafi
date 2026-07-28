@@ -11,6 +11,7 @@ import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -126,7 +127,11 @@ export default async function Project({ params }: ProjectPageProps) {
               <Icons.star className="h-5 w-5 mr-2" /> {page.title}
             </h3>
             <div>
-              <p>{page.description}</p>
+              {page.description && (
+                <p>
+                  <BilingualText text={page.description} />
+                </p>
+              )}
               {page.imgArr.map((img, ind) => (
                 <Image
                   src={img}

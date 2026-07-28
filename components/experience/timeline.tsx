@@ -8,6 +8,7 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
+import { BilingualText } from "../common/bilingual-text";
 
 // Helper function to extract year from date
 const getYearFromDate = (date: Date): string => {
@@ -90,7 +91,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                     {experience.location}
                   </p>
                   <p className="text-sm text-muted-foreground line-clamp-2">
-                    {experience.description[0]}
+                    <BilingualText text={experience.description[0]}/>
                   </p>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import PageContainer from "@/components/common/page-container";
 import { Icons } from "@/components/common/icons";
 import { aboutConfig } from "@/config/about";
 import { pagesConfig } from "@/config/pages";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 export const metadata: Metadata = {
   title: pagesConfig.about.metadata.title,
@@ -34,27 +35,27 @@ export default function AboutPage() {
           <div className="space-y-4">
             {aboutConfig.paragraphs.map((text, index) => (
               <p key={index} className="leading-7 text-muted-foreground">
-                {text}
+                 <BilingualText text={text} />
               </p>
             ))}
           </div>
 
           <div>
-            <h2 className="font-heading text-2xl mb-4">Pendidikan</h2>
+            <h2 className="font-heading text-2xl mb-4">Education</h2>
             <div className="space-y-4">
               {aboutConfig.education.map((edu, index) => (
                 <div key={index} className="border-l-2 border-muted pl-4">
                   <p className="font-medium">{edu.institution}</p>
                   <p className="text-sm text-muted-foreground">
-                    {edu.degree} · {edu.startYear} - {edu.endYear}
+                    <BilingualText text={edu.degree}/> · {edu.startYear} - {edu.endYear}
                   </p>
                   {edu.gpa && (
                     <p className="text-sm text-muted-foreground">
-                      GPA: {edu.gpa}
+                      <BilingualText text={edu.gpa} />
                     </p>
                   )}
                   {edu.description && (
-                    <p className="text-sm mt-1">{edu.description}</p>
+                    <p className="text-sm mt-1"><BilingualText text={edu.description} /></p>
                   )}
                 </div>
               ))}
@@ -62,7 +63,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-2xl mb-4">Sertifikat</h2>
+            <h2 className="font-heading text-2xl mb-4">Certificates</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {aboutConfig.certificates.map((cert, index) =>
                 cert.link ? (

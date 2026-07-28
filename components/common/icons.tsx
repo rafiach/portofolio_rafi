@@ -87,6 +87,7 @@ import {
   SiDjango,
   SiGit,
   SiSqlite,
+  SiPython,
 } from "react-icons/si";
 
 export const Icons = {
@@ -152,6 +153,7 @@ export const Icons = {
   work: HiBriefcase,
   whatsapp: SiWhatsapp,
   instagram: SiInstagram,
+  python: SiPython,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

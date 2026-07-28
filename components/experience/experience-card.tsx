@@ -7,6 +7,7 @@ import React from "react";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 // Helper function to extract year from date
 const getYearFromDate = (date: Date): string => {
@@ -74,7 +75,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
           </div>
           <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2">
-            {experience.description[0]}
+            <BilingualText text={experience.description[0]} />
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
             {experience.skills.slice(0, 2).map((skill, index) => (

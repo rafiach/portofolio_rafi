@@ -23,6 +23,8 @@ import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 import ChipContainer from "@/components/ui/chip-container";
+import { Bilingual } from "@/providers/language-provider";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -65,6 +67,11 @@ export default function IndexPage() {
     },
   };
 
+  const heroDescription: Bilingual = {
+    en: "Building reliable software and intuitive digital experiences that solve real-world problems.",
+    id: "Membangun perangkat lunak yang andal dan pengalaman digital yang intuitif untuk menyelesaikan permasalahan nyata.",
+  }
+
   return (
     <ClientPageWrapper>
       <Script
@@ -105,13 +112,9 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              I build mobile applications that combine intuitive user experiences with modern technologies to solve real-world problems. From AI-powered solutions to IoT-connected systems, I enjoy turning ideas into reliable and impactful products.
+              <BilingualText text={heroDescription} />
             </p>
           </div>
-          <ChipContainer
-            textArr={["Flutter", "Kotlin", "Firebase", "REST API"]}
-          />
-
           <div className="flex flex-col mt-4 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link

@@ -12,6 +12,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { LanguageProvider } from "@/providers/language-provider";
 
 
 
@@ -112,26 +113,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontHeading.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          themes={[
-            "light",
-            "dark",
-            "retro",
-            "cyberpunk",
-            "paper",
-            "aurora",
-            "synthwave",
-          ]}
-        >
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <Toaster />
-          <ModalProvider />
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="retro"
+            themes={["light", "dark", "retro"]}
+          >
+            {children}
+            <Analytics />
+            <Toaster />
+            <ModalProvider />
+          </ThemeProvider>
+        </LanguageProvider>
         {/* <Script
           src="https://convot.xyz/widget.js"
           data-token="3vpr28Va7E8luRq8DMOStAr9tefOCVqifQ28fpp6grrKS4zflNRZQjQpmeu4os_2nuLmmh1DOshndiN5O1vvGg"

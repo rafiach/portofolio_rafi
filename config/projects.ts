@@ -1,14 +1,15 @@
 import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
+import { Bilingual } from "@/providers/language-provider";
 
 interface PagesInfoInterface {
   title: string;
   imgArr: string[];
-  description?: string;
+  description?: Bilingual;
 }
 
 interface DescriptionDetailsInterface {
-  paragraphs: string[];
-  bullets: string[];
+  paragraphs: Bilingual[];
+  bullets: Bilingual[];
 }
 
 export interface ProjectInterface {
@@ -16,7 +17,7 @@ export interface ProjectInterface {
   type: ValidExpType;
   companyName: string;
   category: ValidCategory[];
-  shortDescription: string;
+  shortDescription: Bilingual;
   websiteLink?: string;
   githubLink?: string;
   techStack: ValidSkills[];
@@ -33,8 +34,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "DigiCoop",
     type: "Personal",
     category: ["Full Stack", "Mobile Dev", "AI Integration"],
-    shortDescription:
-      "DigiCoop is an AI-powered mobile cashier application developed as my undergraduate thesis project to modernize transaction workflows in a university cooperative.",
+    shortDescription: {
+      en: "Transforms traditional cooperative checkout into a faster, AI-powered experience using image and voice recognition.",
+      id: "Mengubah proses transaksi koperasi menjadi lebih cepat dan modern melalui teknologi AI berbasis deteksi gambar dan pengenalan suara.",
+    },
     websiteLink: "",
     githubLink: "https://github.com/rafiach/Digicoop",
     techStack: ["Kotlin", "Machine Learning", "Django", "MySQL"],
@@ -44,23 +47,49 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
       {
         title: "Aplication Overview",
-        description:
-          "Smart mobile cashier using computer vision and speech recognition.",
+        description: {
+          en: "Speed up checkout with AI-powered image and voice recognition.",
+          id: "Percepat proses transaksi dengan deteksi gambar dan pengenalan suara berbasis AI.",
+        },
         imgArr: ["/projects/digicoop/image_2.png", "/projects/digicoop/image_3.png", "/projects/digicoop/image_4.png",],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "DigiCoop is an AI-powered mobile cashier application developed as my undergraduate thesis project to modernize transaction workflows in a university cooperative. The application provides a faster and more convenient checkout experience by allowing cashiers to complete transactions using either image recognition or voice recognition.",
-        "I designed and developed the Android application using Kotlin and Jetpack Compose, while integrating AI models for product identification and speech recognition. The application communicates with a backend service to process detections, retrieve product information, calculate transaction totals, and synchronize completed purchases with the cooperative's cashier database.",
-        "By combining computer vision, voice-based interaction, and seamless backend integration, DigiCoop simplifies the checkout process and reduces manual product input while ensuring every completed transaction is automatically recorded in the cooperative's existing system."
+        {
+          en: "DigiCoop reimagines the checkout experience for university cooperatives by replacing manual product entry with AI-powered image and voice recognition. Cashiers can identify products, process transactions, and complete payments more efficiently while reducing human error.",
+          id: "DigiCoop menghadirkan pengalaman transaksi yang lebih modern bagi koperasi kampus dengan menggantikan input produk secara manual menggunakan deteksi gambar dan pengenalan suara berbasis AI. Proses transaksi menjadi lebih cepat, praktis, dan minim kesalahan.",
+        },
+        {
+          en: "I designed and developed the Android application using Kotlin and Jetpack Compose, while integrating computer vision, speech recognition, and a backend service. The application automatically retrieves product information, calculates totals, generates receipts, and synchronizes every completed transaction with the cooperative database.",
+          id: "Saya merancang dan mengembangkan aplikasi Android menggunakan Kotlin dan Jetpack Compose, serta mengintegrasikan computer vision, pengenalan suara, dan layanan backend. Aplikasi secara otomatis mengambil data produk, menghitung total transaksi, membuat struk, dan menyinkronkan setiap transaksi ke database koperasi.",
+        },
+        {
+          en: "More than an academic project, DigiCoop demonstrates how mobile development, artificial intelligence, and backend integration can work together to build a practical solution that improves everyday retail operations.",
+          id: "Lebih dari sekadar proyek akademik, DigiCoop menunjukkan bagaimana pengembangan aplikasi mobile, kecerdasan buatan, dan integrasi backend dapat menghasilkan solusi nyata yang membantu meningkatkan efisiensi operasional sehari-hari.",
+        },
       ],
       bullets: [
-        "Integrated two AI interaction methods: Image Recognition & Voice Recognition.",
-        "Developed a complete mobile cashier workflow from product detection to payment.",
-        "Connected transaction results directly to the cooperative cashier database.",
-        "Built using Kotlin, Jetpack Compose, Django REST API, and YOLOv8.",
-        "Undergraduate thesis project focused on AI-assisted retail transactions."
+        {
+          en: "Combined image and voice recognition into a seamless checkout experience.",
+          id: "Menggabungkan deteksi gambar dan pengenalan suara dalam satu alur transaksi yang praktis.",
+        },
+        {
+          en: "Built an end-to-end mobile cashier system from product detection to payment confirmation.",
+          id: "Membangun sistem kasir mobile end-to-end mulai dari deteksi produk hingga konfirmasi pembayaran.",
+        },
+        {
+          en: "Automatically synchronized completed transactions with the cooperative database.",
+          id: "Menyinkronkan setiap transaksi secara otomatis ke database koperasi.",
+        },
+        {
+          en: "Integrated Kotlin, Django REST API, MySQL, and YOLO into a unified AI-powered solution.",
+          id: "Mengintegrasikan Kotlin, Django REST API, MySQL, dan YOLO menjadi solusi transaksi berbasis AI yang terintegrasi.",
+        },
+        {
+          en: "Developed as an undergraduate capstone project focused on practical AI applications.",
+          id: "Dikembangkan sebagai proyek skripsi yang berfokus pada penerapan AI untuk kebutuhan nyata.",
+        },
       ],
     },
   },
@@ -69,8 +98,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "Danamoo",
     type: "Personal",
     category: ["Mobile Dev", "Full Stack"],
-    shortDescription:
-      "Danamoo is a personal budget tracking application that helps users manage their daily income and expenses through a simple, intuitive, and privacy-friendly experience.",
+    shortDescription: {
+      en: "Helps users take control of their finances with intuitive expense tracking, visual insights, and secure cloud backup.",
+      id: "Membantu pengguna mengelola keuangan dengan pencatatan transaksi yang sederhana, insight visual, dan penyimpanan cloud yang aman.",
+    },
     websiteLink: "",
     githubLink: "",
     techStack: ["Flutter", "Firebase"],
@@ -80,24 +111,50 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
       {
         title: "Aplication Overview",
-        description:
-          "View your financial summary with interactive charts and recent transaction insights.",
+        description: {
+          en: "Track spending, understand your finances, and keep your data safe.",
+          id: "Catat transaksi, pahami kondisi keuangan, dan simpan data dengan aman.",
+        },
         imgArr: ["/projects/danamoo/image_2.png", "/projects/danamoo/image_3.png", "/projects/danamoo/image_4.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Danamoo is a personal budget tracking application that helps users manage their daily income and expenses through a simple, intuitive, and privacy-friendly experience. The application is designed to work seamlessly both offline and online, ensuring financial records remain accessible anytime while providing optional cloud backup.",
-        "As a full-cycle personal project, I independently designed the application architecture, developed the mobile interface, implemented local and cloud data storage, and built features for financial insights and data management. This project allows me to explore the complete application lifecycle beyond frontend development, from data modeling to backend integration.",
-        "Danamoo continues to evolve as I experiment with new features and improve the overall user experience, making it both a practical personal finance tool and a platform for continuous learning.",
+        {
+          en: "Danamoo is a personal finance application designed to make managing daily income and expenses simple, organized, and accessible. With offline support and optional cloud backup, users can keep track of their finances anytime without worrying about losing important data.",
+          id: "Danamoo adalah aplikasi keuangan pribadi yang dirancang untuk membantu pengguna mengelola pemasukan dan pengeluaran dengan cara yang sederhana, terorganisir, dan mudah diakses. Dukungan offline serta backup cloud opsional memastikan data tetap aman dan tersedia kapan pun dibutuhkan.",
+        },
+        {
+          en: "Built as a full-cycle personal project, I independently handled every stage of development—from application architecture and user interface design to local storage, Firebase integration, and financial data visualization. It became an opportunity to explore the complete mobile development lifecycle beyond frontend implementation.",
+          id: "Sebagai proyek personal yang dikembangkan secara end-to-end, saya menangani seluruh proses pengembangan mulai dari perancangan arsitektur, desain antarmuka, implementasi penyimpanan lokal, integrasi Firebase, hingga visualisasi data keuangan. Proyek ini menjadi sarana untuk memahami siklus pengembangan aplikasi mobile secara menyeluruh.",
+        },
+        {
+          en: "Danamoo continues to evolve as I refine the user experience, explore new technologies, and experiment with features that make personal finance management simpler and more meaningful.",
+          id: "Danamoo terus dikembangkan sebagai media eksplorasi teknologi dan penyempurnaan pengalaman pengguna, dengan tujuan menghadirkan aplikasi pengelola keuangan yang semakin praktis dan bermanfaat.",
+        },
       ],
       bullets: [
-        "Built as a full-cycle Flutter application from UI design to cloud integration.",
-        "Supports offline-first data storage with optional cloud backup using Firebase.",
-        "Provides visual financial insights through interactive charts.",
-        "Implements backup and restore functionality for secure data management.",
-        "Continuously improved as an active long-term personal project."
-      ],
+        {
+          en: "Designed and developed as a full-cycle Flutter application.",
+          id: "Dirancang dan dikembangkan sebagai aplikasi Flutter secara end-to-end.",
+        },
+        {
+          en: "Supports offline-first storage with optional Firebase cloud synchronization.",
+          id: "Mendukung penyimpanan offline dengan sinkronisasi cloud menggunakan Firebase.",
+        },
+        {
+          en: "Transforms financial records into clear and interactive visual insights.",
+          id: "Mengubah data transaksi menjadi insight keuangan melalui visualisasi yang interaktif.",
+        },
+        {
+          en: "Includes backup and restore features to keep financial data secure.",
+          id: "Menyediakan fitur backup dan restore untuk menjaga keamanan data pengguna.",
+        },
+        {
+          en: "Continuously improved as an active long-term personal project.",
+          id: "Terus dikembangkan sebagai proyek personal jangka panjang untuk eksplorasi dan peningkatan fitur.",
+        },
+      ],  
     },
   },
   {
@@ -105,8 +162,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "SiSapi",
     type: "Personal",
     category: ["Mobile Dev", "IoT", "Machine Learning"],
-    shortDescription:
-      "An Android application for cattle management that integrates IoT sensors and on-device machine learning to analyze livestock feed nutrition in real time.",
+    shortDescription: {
+      en: "Empowers cattle farmers with digital livestock management and real-time feed nutrition analysis powered by IoT and on-device AI.",
+      id: "Membantu peternak mengelola data ternak dan menganalisis nutrisi pakan secara real-time melalui integrasi IoT dan AI.",
+    },
     websiteLink: "",
     githubLink: "",
     techStack: [
@@ -122,25 +181,22 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
       {
         title: "Dashboard Overview",
-        description:
-          "Monitor cattle information and access essential livestock management features from a centralized dashboard.",
+        description: {
+          en: "Monitor livestock health and analyze feed quality in real time.",
+          id: "Pantau kondisi ternak dan analisis kualitas pakan secara real-time.",
+        },
         imgArr: [
           "/projects/sisapi/image_2.png",
-        ],
-      },
-      {
-        title: "Cattle Management",
-        description:
-          "Manage cattle profiles, operational records, health history, and estimated selling prices in one place.",
-        imgArr: [
           "/projects/sisapi/image_3.png",
           "/projects/sisapi/image_4.png",
         ],
       },
       {
         title: "Feed Nutrition Detection",
-        description:
-          "Analyze livestock feed nutrition in real time using data collected from an integrated NIR sensor.",
+        description:{
+          en: "Analyze livestock feed nutrition in real time using data collected from an integrated NIR sensor.",
+          id: "Menganalisis kualitas pakan ternak secara real-time menggunakan data yang dikumpulkan dari sensor NIR yang terintegrasi.",
+        },
         imgArr: [
           "/projects/sisapi/image_5.png"
         ],
@@ -149,17 +205,40 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "SiSapi is an Android application developed for a community service program to help cattle farmers manage livestock information and monitor feed quality through digital technology. The application simplifies daily record-keeping while providing valuable insights into cattle health and operational data.",
-        "As the Android Developer, I designed and implemented the mobile application, integrating it with Firebase Realtime Database to receive data from an external Near Infrared (NIR) sensor. The application processes the incoming sensor data and displays feed nutrition analysis directly on the device, providing farmers with instant results without requiring a separate backend service.",
-        "Beyond livestock management, the application also includes operational expense tracking, cattle health records, and selling price estimation, making it a comprehensive digital assistant for livestock management."
+        {
+          en: "SiSapi helps cattle farmers manage livestock more efficiently by combining digital record management with real-time feed nutrition analysis. Instead of relying on manual notes and separate tools, farmers can monitor cattle information, health records, and feed quality from a single mobile application.",
+          id: "SiSapi membantu peternak mengelola ternak dengan lebih efisien melalui penggabungan pencatatan digital dan analisis nutrisi pakan secara real-time. Seluruh informasi penting, mulai dari data ternak hingga kualitas pakan, dapat diakses dalam satu aplikasi mobile.",
+        },
+        {
+          en: "As the Android Developer, I designed and developed the mobile application using Kotlin while integrating Firebase Realtime Database with an external NIR sensor. The application processes sensor data directly on the device to deliver instant feed nutrition analysis without relying on a dedicated backend server.",
+          id: "Sebagai Android Developer, saya merancang dan mengembangkan aplikasi menggunakan Kotlin serta mengintegrasikan Firebase Realtime Database dengan sensor NIR. Data dari sensor diproses langsung di perangkat sehingga hasil analisis nutrisi pakan dapat ditampilkan secara instan tanpa memerlukan server terpisah.",
+        },
+        {
+          en: "Beyond livestock management, SiSapi also supports operational expense tracking, cattle health records, and selling price estimation, providing farmers with a practical digital companion for daily farm management.",
+          id: "Selain membantu pengelolaan ternak, SiSapi juga menyediakan pencatatan biaya operasional, riwayat kesehatan sapi, dan estimasi harga jual sehingga menjadi pendamping digital yang praktis untuk aktivitas peternakan sehari-hari.",
+        },
       ],
-
       bullets: [
-        "Developed a native Android application using Kotlin for livestock management.",
-        "Integrated Firebase Realtime Database for real-time communication with IoT devices.",
-        "Implemented on-device machine learning inference for feed nutrition analysis.",
-        "Built features for cattle records, operational expenses, disease history, and selling price estimation.",
-        "Contributed to a community service project promoting digital transformation in livestock farming."
+        {
+          en: "Digitized livestock management into a centralized mobile platform.",
+          id: "Mendigitalisasi pengelolaan data ternak dalam satu platform mobile.",
+        },
+        {
+          en: "Integrated Firebase Realtime Database with IoT sensors for live data synchronization.",
+          id: "Mengintegrasikan Firebase Realtime Database dengan sensor IoT untuk sinkronisasi data secara real-time.",
+        },
+        {
+          en: "Implemented on-device machine learning for instant feed nutrition analysis.",
+          id: "Mengimplementasikan machine learning di perangkat untuk analisis nutrisi pakan secara instan.",
+        },
+        {
+          en: "Built comprehensive features for cattle records, operational expenses, and health management.",
+          id: "Membangun fitur lengkap untuk data ternak, biaya operasional, dan riwayat kesehatan.",
+        },
+        {
+          en: "Contributed to a community service initiative promoting digital transformation in livestock farming.",
+          id: "Berkontribusi dalam program pengabdian masyarakat yang mendorong transformasi digital di sektor peternakan.",
+        },
       ],
     },
   },
@@ -168,8 +247,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "Danukerti",
     type: "Professional",
     category: ["Mobile Dev", "IoT"],
-    shortDescription:
-      "A smart aquarium monitoring and control application that enables real-time device management through IoT integration.",
+    shortDescription: {
+      en: "Simplifies smart aquarium management with real-time monitoring and reliable remote control through IoT integration.",
+      id: "Mempermudah pengelolaan akuarium pintar melalui monitoring real-time dan kontrol perangkat berbasis IoT.",
+    },
     websiteLink: "",
     githubLink: "",
     techStack: [
@@ -184,8 +265,10 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
       {
         title: "Smart Aquarium Dashboard",
-        description:
-          "Monitor water conditions and remotely control aquarium devices through automatic or manual operation modes.",
+        description: {
+          en: "Monitor and control your smart aquarium from anywhere in real time.",
+          id: "Pantau dan kendalikan akuarium pintar kapan saja secara real-time.",
+        },
         imgArr: [
           "/projects/danukerti/image_1.png"
         ],
@@ -194,17 +277,41 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Danukerti is an Android application developed to support a smart aquarium IoT system by providing real-time monitoring and remote device control. The application allows users to monitor sensor data, automate routine operations, and manually control connected hardware from a single dashboard.",
-        "As the Android Developer, I built the mobile application and integrated it with Firebase Realtime Database to synchronize sensor readings and control commands. The application supports both automatic scheduling and manual operation while ensuring the interface remains synchronized with live device status.",
-        "To improve system reliability, the application implements a one-shot trigger mechanism that prevents duplicate commands and repeated notifications, reducing the risk of unintended device behavior during remote operation."
+        {
+          en: "Danukerti makes smart aquarium management more convenient by bringing real-time monitoring and remote device control into a single mobile dashboard. Users can monitor water conditions, automate daily routines, or manually operate connected devices whenever needed.",
+          id: "Danukerti mempermudah pengelolaan akuarium pintar dengan menghadirkan monitoring real-time dan kontrol perangkat dalam satu dashboard mobile. Pengguna dapat memantau kondisi akuarium, menjalankan proses otomatis, maupun mengendalikan perangkat secara manual kapan pun dibutuhkan.",
+        },
+        {
+          en: "As the Android Developer, I built the mobile application using Kotlin and integrated Firebase Realtime Database to synchronize sensor readings and control commands. The application keeps the interface updated with live device status while supporting both automatic and manual operation modes.",
+          id: "Sebagai Android Developer, saya mengembangkan aplikasi menggunakan Kotlin dan mengintegrasikan Firebase Realtime Database untuk menyinkronkan data sensor serta perintah kontrol. Aplikasi selalu menampilkan kondisi perangkat secara real-time sekaligus mendukung mode otomatis maupun manual.",
+        },
+        {
+          en: "To improve reliability, I implemented a one-shot trigger mechanism that prevents duplicate commands and repeated notifications, ensuring safer communication between the application and IoT devices.",
+          id: "Untuk meningkatkan keandalan sistem, saya menerapkan mekanisme one-shot trigger yang mencegah perintah maupun notifikasi terkirim berulang, sehingga komunikasi antara aplikasi dan perangkat IoT menjadi lebih aman dan stabil.",
+        },
       ],
 
       bullets: [
-        "Developed a native Android application for real-time IoT monitoring and remote control.",
-        "Integrated Firebase Realtime Database for live sensor updates and device communication.",
-        "Implemented automatic and manual control modes for aquarium management.",
-        "Designed a one-shot trigger mechanism to prevent duplicate commands and notification spam.",
-        "Built using a reactive architecture with ViewModel and StateFlow for synchronized real-time data."
+        {
+          en: "Built a real-time mobile dashboard for monitoring and controlling IoT devices.",
+          id: "Membangun dashboard mobile untuk monitoring dan kontrol perangkat IoT secara real-time.",
+        },
+        {
+          en: "Integrated Firebase Realtime Database for seamless device synchronization.",
+          id: "Mengintegrasikan Firebase Realtime Database untuk sinkronisasi perangkat secara real-time.",
+        },
+        {
+          en: "Supported both automatic scheduling and manual device control.",
+          id: "Mendukung mode otomatis maupun kontrol perangkat secara manual.",
+        },
+        {
+          en: "Implemented a one-shot trigger mechanism to prevent duplicate commands and notification spam.",
+          id: "Menerapkan mekanisme one-shot trigger untuk mencegah perintah ganda dan spam notifikasi.",
+        },
+        {
+          en: "Designed with a reactive architecture to keep the interface synchronized with live device status.",
+          id: "Menggunakan arsitektur reaktif agar tampilan selalu sinkron dengan kondisi perangkat secara langsung.",
+        },
       ],
     },
   },
@@ -213,8 +320,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "Tessa",
     type: "Professional",
     category: ["Mobile Dev", "IoT"],
-    shortDescription:
-      "A smart waste management application that monitors IoT-enabled waste bins, detects waste types, and introduces a reward point concept to encourage responsible waste disposal.",
+    shortDescription: {
+      en: "Encourages smarter waste management through IoT-powered monitoring, waste recognition, and a reward-based recycling experience.",
+      id: "Mendorong pengelolaan sampah yang lebih cerdas melalui monitoring berbasis IoT, deteksi sampah, dan sistem penghargaan untuk meningkatkan kebiasaan daur ulang.",
+    },
     websiteLink: "",
     githubLink: "",
     techStack: [
@@ -231,32 +340,40 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
     {
       title: "Dashboard Overview",
-      description:
-        "Monitor waste bin capacity, reward points, and real-time device status from a centralized dashboard.",
+      description: {
+        en: "Monitor waste bins, recycling activity, and reward points in real time.",
+        id: "Pantau kondisi tempat sampah, aktivitas daur ulang, dan poin secara real-time.",
+      },
       imgArr: [
         "/projects/tessa/image_1.png"
       ],
     },
     {
       title: "Waste Detection",
-      description:
-        "Scan and identify waste through the smart waste bin, then automatically record the detected waste type.",
+      description: {
+        en: "Identify waste automatically and record every disposal with the smart waste bin.",
+        id: "Identifikasi jenis sampah secara otomatis dan catat setiap aktivitas pembuangan.",
+      },
       imgArr: [
         "/projects/tessa/image_2.png"
       ],
     },
-        {
-      title: "Disposal History",
-      description:
-        "Review previous waste disposal activities, collected points, and transaction history in one place.",
-      imgArr: [
-        "/projects/tessa/image_3.png"
-      ],
-    },
+      {
+        title: "Disposal History",
+        description: {
+          en: "Review recycling activities and track every completed disposal in one timeline.",
+          id: "Lihat riwayat aktivitas daur ulang dan seluruh proses pembuangan dalam satu tempat.",
+        },
+        imgArr: [
+          "/projects/tessa/image_3.png"
+        ],
+      },
     {
       title: "Reward Points",
-      description:
-        "Earn reward points from every successful waste disposal and redeem them to encourage sustainable habits.",
+      description: {
+        en: "Turn everyday recycling into reward points that encourage sustainable habits.",
+        id: "Ubah setiap aktivitas daur ulang menjadi poin sebagai bentuk apresiasi terhadap kebiasaan ramah lingkungan.",
+      },
       imgArr: [
         "/projects/tessa/image_4.png"
       ],
@@ -265,17 +382,41 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Tessa is an Android application developed to support a smart waste bin system by providing real-time monitoring and waste detection through IoT integration. The application enables users to monitor waste bin conditions while promoting more responsible waste disposal practices.",
-        "As the Android Developer, I built the mobile application and integrated it with Firebase Realtime Database to synchronize waste detection results, bin capacity, and device status in real time. The application also implements smart notifications to prevent repeated alerts for the same condition, creating a cleaner and more reliable user experience.",
-        "Beyond monitoring, the project introduces a reward point concept where detected waste can be converted into points, providing a foundation for a future digital waste bank ecosystem that encourages community participation in waste management."
+        {
+          en: "Tessa transforms a conventional waste bin into a smart recycling experience by combining IoT monitoring, automatic waste recognition, and real-time mobile interaction. Users can monitor waste bin status, track recycling activities, and stay engaged through a reward point system that promotes responsible waste disposal.",
+          id: "Tessa mengubah tempat sampah konvensional menjadi solusi daur ulang yang lebih cerdas melalui monitoring berbasis IoT, deteksi sampah otomatis, dan interaksi mobile secara real-time. Pengguna dapat memantau kondisi tempat sampah, melihat aktivitas daur ulang, serta memperoleh poin sebagai bentuk apresiasi atas kebiasaan membuang sampah dengan benar.",
+        },
+        {
+          en: "As the Android Developer, I designed and developed the mobile application using Kotlin while integrating Firebase Realtime Database for live communication with IoT devices. The application synchronizes waste detection, bin capacity, and recycling history to provide an up-to-date user experience.",
+          id: "Sebagai Android Developer, saya merancang dan mengembangkan aplikasi menggunakan Kotlin serta mengintegrasikan Firebase Realtime Database untuk komunikasi real-time dengan perangkat IoT. Aplikasi menyinkronkan hasil deteksi sampah, kapasitas tempat sampah, dan riwayat aktivitas agar pengguna selalu mendapatkan informasi terbaru.",
+        },
+        {
+          en: "Beyond real-time monitoring, the project explores a digital reward ecosystem where recycling activities are converted into points, creating a foundation for future smart waste bank solutions that encourage long-term community participation.",
+          id: "Selain menyediakan monitoring secara real-time, proyek ini juga memperkenalkan konsep ekosistem penghargaan digital, di mana aktivitas daur ulang dikonversi menjadi poin sebagai langkah awal menuju sistem bank sampah digital yang mendorong partisipasi masyarakat secara berkelanjutan.",
+        },
       ],
 
       bullets: [
-        "Developed a native Android application for real-time smart waste monitoring.",
-        "Integrated Firebase Realtime Database for live synchronization with IoT devices.",
-        "Implemented smart alert logic to prevent duplicate notifications.",
-        "Built dashboards for waste detection, bin capacity, and disposal history.",
-        "Designed a reward point concept to support future digital waste bank integration."
+        {
+          en: "Built a real-time mobile dashboard for monitoring smart waste bins.",
+          id: "Membangun dashboard mobile untuk memantau kondisi smart waste bin secara real-time.",
+        },
+        {
+          en: "Connected IoT devices through Firebase Realtime Database for live synchronization.",
+          id: "Menghubungkan perangkat IoT menggunakan Firebase Realtime Database untuk sinkronisasi data secara langsung.",
+        },
+        {
+          en: "Designed a reward-based recycling experience to encourage sustainable habits.",
+          id: "Merancang sistem penghargaan berbasis poin untuk mendorong kebiasaan daur ulang yang berkelanjutan.",
+        },
+        {
+          en: "Implemented smart notification logic to eliminate duplicate alerts.",
+          id: "Mengimplementasikan logika smart notification untuk menghindari notifikasi yang berulang.",
+        },
+        {
+          en: "Laid the foundation for a future digital waste bank ecosystem.",
+          id: "Membangun fondasi awal menuju ekosistem bank sampah digital.",
+        },
       ],
     },
   },
@@ -284,8 +425,10 @@ export const Projects: ProjectInterface[] = [
     companyName: "EyeGuard",
     type: "Professional",
     category: ["Mobile Dev"],
-    shortDescription:
-      "A mobile application that helps users maintain eye health through educational content, vision screening, screen time monitoring, and nearby eye clinic recommendations.",
+    shortDescription: {
+      en: "Promotes healthier digital habits through eye care education, vision screening, and personalized screen time monitoring.",
+      id: "Mendorong kebiasaan digital yang lebih sehat melalui edukasi kesehatan mata, tes penglihatan, dan pemantauan waktu penggunaan perangkat.",
+    },
     websiteLink: "",
     githubLink: "",
     techStack: [
@@ -299,24 +442,30 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [
       {
         title: "Eye Health Dashboard",
-        description:
-          "Access eye care tips, educational content, and daily health insights from a centralized dashboard.",
+        description: {
+          en: "Discover eye care tips and access essential eye health features from one dashboard.",
+          id: "Temukan tips kesehatan mata dan akses seluruh fitur utama dalam satu dashboard.",
+        },
         imgArr: [
           "/projects/eyeguard/image_1.png"
         ],
       },
       {
         title: "Vision Test & Screen Time",
-        description:
-          "Perform a simple vision screening and monitor application usage with customizable screen time reminders.",
+        description: {
+          en: "Check your vision and build healthier screen time habits with personalized reminders.",
+          id: "Lakukan tes penglihatan sederhana dan bangun kebiasaan penggunaan perangkat yang lebih sehat.",
+        },
         imgArr: [
           "/projects/eyeguard/image_2.png",
         ],
       },
       {
         title: "Nearby Eye Clinics",
-        description:
-          "Locate nearby eye clinics based on your current location with estimated travel distances.",
+        description: {
+          en: "Find nearby eye clinics based on your location whenever professional care is needed.",
+          id: "Temukan klinik mata terdekat berdasarkan lokasi saat membutuhkan penanganan lebih lanjut.",
+        },
         imgArr: [
           "/projects/eyeguard/image_3.png"
         ],
@@ -325,21 +474,43 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "EyeGuard is a Flutter-based mobile application designed to encourage healthier digital habits and improve awareness of eye health. It combines educational resources, self-assessment tools, and location-based services into a single, user-friendly platform.",
-        "As the Flutter Developer, I developed the mobile application and implemented features including eye health education, a simple vision screening tool, screen time monitoring with configurable reminders, and nearby eye clinic recommendations based on the user's location.",
-        "By integrating preventive education with practical daily tools, EyeGuard helps users better understand their eye health while encouraging healthier smartphone usage habits."
+        {
+          en: "EyeGuard helps users build healthier digital habits by combining eye care education, vision screening, and screen time awareness in one mobile application. Rather than simply providing information, it encourages users to take better care of their eye health through practical daily tools.",
+          id: "EyeGuard membantu pengguna membangun kebiasaan digital yang lebih sehat dengan menggabungkan edukasi kesehatan mata, tes penglihatan, dan pemantauan screen time dalam satu aplikasi. Tidak hanya memberikan informasi, aplikasi ini juga mendorong pengguna untuk menjaga kesehatan mata melalui fitur yang dapat digunakan setiap hari.",
+        },
+        {
+          en: "As the Flutter Developer, I built the application and implemented educational content, a simple vision test, customizable screen time reminders, and location-based eye clinic recommendations. Together, these features provide users with a complete eye health companion in a single experience.",
+          id: "Sebagai Flutter Developer, saya mengembangkan aplikasi serta mengimplementasikan fitur edukasi, tes penglihatan sederhana, pengingat screen time yang dapat disesuaikan, dan rekomendasi klinik mata berdasarkan lokasi pengguna. Seluruh fitur tersebut dirancang untuk menghadirkan pengalaman yang lengkap dalam menjaga kesehatan mata.",
+        },
+        {
+          en: "By combining preventive education with practical mobile features, EyeGuard demonstrates how technology can support healthier lifestyles and raise awareness of digital well-being.",
+          id: "Dengan menggabungkan edukasi preventif dan fitur mobile yang praktis, EyeGuard menunjukkan bagaimana teknologi dapat membantu membangun gaya hidup yang lebih sehat sekaligus meningkatkan kesadaran terhadap kesehatan mata di era digital.",
+        },
       ],
-
       bullets: [
-        "Developed a cross-platform mobile application using Flutter.",
-        "Implemented screen time monitoring with customizable usage reminders.",
-        "Built a simple vision screening feature for basic eye health self-assessment.",
-        "Integrated location-based clinic recommendations with distance calculation.",
-        "Combined educational content and practical tools to promote healthier digital habits."
+        {
+          en: "Developed a cross-platform mobile application with Flutter.",
+          id: "Mengembangkan aplikasi mobile lintas platform menggunakan Flutter.",
+        },
+        {
+          en: "Built personalized screen time monitoring with configurable reminders.",
+          id: "Membangun fitur pemantauan screen time dengan pengingat yang dapat disesuaikan.",
+        },
+        {
+          en: "Implemented a simple vision screening feature for daily eye health awareness.",
+          id: "Mengimplementasikan fitur tes penglihatan sederhana untuk meningkatkan kesadaran terhadap kesehatan mata.",
+        },
+        {
+          en: "Integrated location-based eye clinic recommendations with distance calculation.",
+          id: "Mengintegrasikan rekomendasi klinik mata berbasis lokasi lengkap dengan perhitungan jarak.",
+        },
+        {
+          en: "Combined education and practical tools into a single digital eye health experience.",
+          id: "Menggabungkan edukasi dan fitur praktis dalam satu pengalaman digital untuk menjaga kesehatan mata.",
+        },
       ],
     },
   },
-  
 ];
 
 export const featuredProjects = Projects.slice(0, 3);

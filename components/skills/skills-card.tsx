@@ -1,5 +1,6 @@
 import Rating from "@/components/skills/rating";
 import { skillsInterface } from "@/config/skills";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 interface SkillsCardProps {
   skills: skillsInterface[];
@@ -18,7 +19,7 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
             <div className="space-y-2">
               <h3 className="font-bold">{skill.name}</h3>
               <p className="text-sm text-muted-foreground">
-                {skill.description}
+                <BilingualText text={skill.description} />
               </p>
               <Rating stars={skill.rating} />
             </div>

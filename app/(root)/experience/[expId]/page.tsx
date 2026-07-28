@@ -12,6 +12,7 @@ import ChipContainer from "@/components/ui/chip-container";
 import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
 import { experiences } from "@/config/experience";
 import { siteConfig } from "@/config/site";
+import { BilingualText } from "@/components/common/bilingual-text";
 
 interface ExperienceDetailPageProps {
   params: Promise<{
@@ -83,7 +84,7 @@ export default async function ExperienceDetailPage({
                   className="text-base leading-relaxed flex items-start gap-3"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {desc}
+                  <BilingualText text={desc} />
                 </li>
               ))}
             </ul>
@@ -107,7 +108,7 @@ export default async function ExperienceDetailPage({
                   className="text-base leading-relaxed flex items-start gap-3"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {achievement}
+                  <BilingualText text={achievement}/>
                 </li>
               ))}
             </ul>
