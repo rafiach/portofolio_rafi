@@ -49,13 +49,19 @@ export const aboutConfig = {
   ],
   certificates: [
     {
+      title: "National Internship Program",
+      issuer: "PT Xeno Persada Teknologi (Xenopati)",
+      year: "2026",
+      link: "https://drive.google.com/file/d/1teC_0gVehQvjzhGOyF2tH4kgMtUXzlkh/view?usp=sharing",
+    },
+    {
       title: "TOEFL ITP",
       issuer: "Royal English",
       year: "2025",
       link: "https://drive.google.com/file/d/1eLGdHE7N2_p9zbXtZb-OdaepfvhagREm/view?usp=sharing",
     },
     {
-        title: "Microsoft Office Specialist",
+      title: "Microsoft Office Specialist",
       issuer: "Trust Training Partners",
       year: "2024",
       link: "https://drive.google.com/file/d/1z9qYNU_uz_hi3HN4ftzVQnjyW3SbgiQu/view?usp=sharing",
